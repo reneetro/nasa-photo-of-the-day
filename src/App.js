@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Body from './Body';
+import data from './dummy-data';
 
 function App() {
   return (

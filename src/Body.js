@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import data from './dummy-data';
+
 
 export default function ShowImg(props) {
-    
+    const [imageInfo, getImageInfo ] = useState(data);
+    const selected = imageInfo.map(info => {
+        console.log( info.url );
+        return info.url;
+    })
+
     return (
         <div>
-            <img src='https://www.youtube.com/embed/liapnqj9GDc?rel=0' alt='astronomy of the day' />
+            <iframe width="320" height="240" 
+                 src={selected}>
+            </iframe>
         </div>
     )
 }
