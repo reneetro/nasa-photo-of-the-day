@@ -4,7 +4,7 @@ import axios from 'axios';
 const apiKey = 'cF6U1EyBeISRWUAurEgGBtenLezAOuhcvL1O79Rt'
 
 export default function ShowImg() {
-    const [imageInfo, setImageInfo] = useState(null);
+    const [imageInfo, setImageInfo] = useState([]);
 
     useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
@@ -15,7 +15,7 @@ export default function ShowImg() {
         .catch(err => console.error(err));
     }, []);
 
-    if (!imageInfo) return null;
+    //if (!imageInfo) return null;
 
     let display;
     if(imageInfo.media_type === 'image') {
