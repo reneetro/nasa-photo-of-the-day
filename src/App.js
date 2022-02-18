@@ -4,7 +4,6 @@ import Body from './Body';
 
 function App() {
   
-  
   return (
     <div className="App">
       <div>
@@ -19,7 +18,5 @@ function App() {
     </div>
   );
 }
-
-
 
 export default App;
